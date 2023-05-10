@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.HomeFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/iv_change"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/change" />
+
+            <TextView
+                android:id="@+id/tv_change"
+                app:fontFamily="sans-serif-light"
+                android:textColor="@color/white"
+                android:paddingStart="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Измененные файлы" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_baseline_menu_24" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_file" />
+
+</LinearLayout>
